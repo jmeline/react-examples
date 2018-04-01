@@ -17,3 +17,6 @@ Still need to deep dive into the following:
 I have been quite impressed with these resources that have helped in my personal understanding. 
 - [egghead.io](https://egghead.io/courses/getting-started-with-redux)
   - [egghead.io-course-notes](https://github.com/tayiorbeii/egghead.io_redux_course_notes)
+- [full stack redux](http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html)
+- [mark's dev blog](http://blog.isquaredsoftware.com/tags/redux/)
+- [redux source code](https://github.com/reactjs/redux)
