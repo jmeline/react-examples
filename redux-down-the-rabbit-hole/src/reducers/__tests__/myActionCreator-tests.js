@@ -1,6 +1,13 @@
-import { makeActionCreator } from '../myActionCreator';
+import makeActionCreator from '../myActionCreator';
 
 describe('myActionCreator', () => {
+  it('tests simple action with no parameters', () => {
+
+    const SIMPLE_ACTION = 'SimpleAction';
+    expect(makeActionCreator(SIMPLE_ACTION))
+      .toEqual({ type: SIMPLE_ACTION });
+  });
+
   it('tests simple action', () => {
     const sampleAction = makeActionCreator('SAMPLE_ACTION', "id");
     expect(sampleAction(1)).toEqual({ type: 'SAMPLE_ACTION', id: 1});

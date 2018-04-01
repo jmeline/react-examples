@@ -1,5 +1,5 @@
-import { myReducerCreator } from '../myReducerCreator';
-import { makeActionCreator } from '../myActionCreator';
+import myReducerCreator from '../myReducerCreator';
+import makeActionCreator from '../myActionCreator';
 
 describe('myReducer creator', () => {
   const handlers = {

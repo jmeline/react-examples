@@ -1,18 +1,16 @@
-import { myReducerCreator } from '../myReducerCreator';
-
-export const todo = myReducerCreator({}, {
-  'ADD_TODO': (_, action) => ({
-    id: action.id,
-    payload: action.payload,
-    completed: false
-  })
-});
+import myReducerCreator from '../myReducerCreator';
 
 export const todos = myReducerCreator([], {
   'ADD_TODO': (state, action) => [
-    ...state,
-    todo(undefined, action)
-  ],
+    ...state, {
+    id: action.id,
+    payload: action.payload,
+    completed: false
+  }],
   'REMOVE_TODO': (state, action) =>
-    state.filter(x => x.id !== action.id)
+    state.filter(x => x.id !== action.id),
+  'TOGGLE_TODO': (state, action) => state.map(x =>
+    x.id === action.id
+      ? { ...x, completed: !x.completed }
+      : x)
 });

@@ -1,11 +1,18 @@
 import { todos } from '../todoReducer';
 import { createStore } from 'redux';
 import { myCreateStore } from '../../myRedux';
-import { makeActionCreator } from '../../myActionCreator';
+import makeActionCreator from '../../myActionCreator';
 
 describe('todo', () => {
   const addTodoAction = makeActionCreator('ADD_TODO', 'id', 'payload');
   const removeTodoAction = makeActionCreator('REMOVE_TODO', 'id');
+  const toggleTodoAction = makeActionCreator('TOGGLE_TODO', 'id');
+  const makeObject =
+    (...keys) =>
+    (...values) =>
+    keys.reduce((obj, key, index) => ({
+      ...obj, [key]: values[index]
+    }), {});
 
   it('exists', () => {
     const stateBefore = [];
@@ -45,12 +52,6 @@ describe('todo', () => {
   });
 
   it('testing remove todo with my redux', () => {
-    const makeObject =
-      (...keys) =>
-      (...values) =>
-      keys.reduce((obj, key, index) => ({
-        ...obj, [key]: values[index]
-      }), {});
     const item = makeObject('id', 'payload', 'completed');
 
     const store = myCreateStore(todos, []);
@@ -66,5 +67,20 @@ describe('todo', () => {
       item(0, "home-made redux", false),
       item(2, "last payload", false)]);
   });
+  it('TOGGLE_COMPLETE', () => {
+    const item = makeObject('id', 'payload', 'completed');
+    const currentState = [
+      item(0, "home-made redux", false),
+      item(1, "another action", false),
+      item(2, "last payload", false)
+    ];
+    const action = toggleTodoAction(1);
+    const nextState = todos(currentState, action);
+    expect(nextState).toEqual([
+      item(0, "home-made redux", false),
+      item(1, "another action", true),
+      item(2, "last payload", false)
+    ])
+  })
 });
 
