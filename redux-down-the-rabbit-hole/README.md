@@ -1,5 +1,5 @@
 Down the rabbit hole
-![down we go](https://hacked.com/wp-content/uploads/2017/06/Rabbit-hole.jpg)
+![down we go](https://hacked.com/wp-content/uploads/2017/06/Rabbit-hole-680x454.jpg)
 In this project, I rewrote the following pieces of redux functionality. Cleanup is still needed but it is a good start:
 - [createStore](https://github.com/jmeline/react-examples/blob/master/redux-down-the-rabbit-hole/src/reducers/myRedux.js)
 - [combineReducers](https://github.com/jmeline/react-examples/blob/master/redux-down-the-rabbit-hole/src/reducers/myCombineReducers.js)
