@@ -3,9 +3,9 @@ import makeActionCreator from '../myActionCreator';
 describe('myActionCreator', () => {
   it('tests simple action with no parameters', () => {
 
-    const SIMPLE_ACTION = 'SimpleAction';
+    const SIMPLE_ACTION = 'Simple_Action';
     expect(makeActionCreator(SIMPLE_ACTION))
-      .toEqual({ type: SIMPLE_ACTION });
+      .toEqual({ type: 'SIMPLE_ACTION' });
   });
 
   it('tests simple action', () => {
@@ -30,4 +30,4 @@ describe('myActionCreator', () => {
     expect(sampleAction(1, 'bob', 'sampleTitle', 'sushi'))
       .toEqual(expectedAction);
   });
-})
+});

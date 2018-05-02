@@ -6,7 +6,9 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1",
-    "redux": "^3.7.2"
+    "recompose": "^0.27.0",
+    "redux": "^3.7.2",
+    "redux-arc": "^0.7.3"
   },
   "scripts": {
     "start": "react-scripts start",

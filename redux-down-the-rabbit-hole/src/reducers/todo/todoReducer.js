@@ -8,9 +8,9 @@ export const todos = myReducerCreator([], {
     completed: false
   }],
   'REMOVE_TODO': (state, action) =>
-    state.filter(x => x.id !== action.id),
-  'TOGGLE_TODO': (state, action) => state.map(x =>
-    x.id === action.id
-      ? { ...x, completed: !x.completed }
-      : x)
+    state.filter(todo => todo.id !== action.id),
+  'TOGGLE_TODO': (state, action) => state.map(todo =>
+    todo.id === action.id
+      ? { ...todo, completed: !todo.completed }
+      : todo)
 });
