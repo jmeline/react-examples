@@ -11,7 +11,10 @@ const HeaderComponent = ({ logo }) =>
 
 const Header = withProps({ logo })(HeaderComponent);
 
+// lets make a comments!!!
+
 class App extends Component {
+  const string = 'asdflkjh';
   render() {
     return (
       <div className="App">

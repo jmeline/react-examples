@@ -1,3 +1,4 @@
+// this is pretty neat
 export default function(reducers) {
   return function(state = {}, action) {
     return Object.keys(reducers)
