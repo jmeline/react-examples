@@ -6,9 +6,11 @@ const App = () => (
   <>
     <img alt="logo" height="250" src={logo} />
     <div className="container">
-      <div className="item">item 1</div>
-      <div className="item">item 2</div>
-      <div className="item">item 3</div>
+      <div>item 1</div>
+      <div>item 2</div>
+      <div>item 3</div>
+      <div>item 4</div>
+      <div>item 5</div>
     </div>
   </>
 );
